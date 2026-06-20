@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 稳定入口介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fafaf8;
+            color: #1c1f1e;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.7;
+            font-weight: 400;
+            padding: 2.4rem 1.2rem;
+        }
+
+        .page {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 28px;
+            padding: 3rem 2.2rem 4rem;
+            box-shadow: 0 6px 28px rgba(0, 0, 0, 0.02), 0 1px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        h1 {
+            font-size: 2.6rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.8rem;
+            color: #1f2a26;
+        }
+
+        .meta-line {
+            font-size: 0.9rem;
+            color: #7c857f;
+            border-bottom: 1px solid #e9edea;
+            padding-bottom: 1.2rem;
+            margin-bottom: 2.4rem;
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-line span {
+            white-space: nowrap;
+        }
+
+        .hero-img {
+            background: #eef1ee;
+            border-radius: 24px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2.8rem;
+            color: #4c5a53;
+            font-size: 1rem;
+            letter-spacing: 0.4px;
+            background-image: radial-gradient(circle at 20% 30%, #d6dfd8 0%, #e8ede9 100%);
+        }
+
+        .hero-img svg {
+            width: 64px;
+            height: 64px;
+            fill: none;
+            stroke: #3b4b42;
+            stroke-width: 1.2;
+            opacity: 0.6;
+            margin-right: 16px;
+        }
+
+        .hero-img .text {
+            font-weight: 380;
+        }
+
+        .intro {
+            font-size: 1.08rem;
+            margin-bottom: 2.2rem;
+        }
+
+        .intro a {
+            color: #1f593a;
+            text-decoration: none;
+            border-bottom: 1px solid #b6cdbd;
+            padding-bottom: 0.1rem;
+            transition: border-color 0.2s;
+        }
+
+        .intro a:hover {
+            border-color: #1f593a;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 480;
+            margin-top: 2.8rem;
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.01em;
+            color: #26332d;
+        }
+
+        .card-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: #f5f7f5;
+            border-radius: 24px;
+            padding: 1.6rem 1.8rem;
+            transition: background 0.2s;
+        }
+
+        .card h3 {
+            font-size: 1.12rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #1f2a26;
+        }
+
+        .card p {
+            font-size: 0.98rem;
+            color: #3b4a41;
+        }
+
+        .tag-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem 0.8rem;
+            margin: 1rem 0 0.2rem;
+        }
+
+        .tag {
+            background: #e1e8e3;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            font-size: 0.82rem;
+            color: #2b3d34;
+        }
+
+        .people-section {
+            margin: 2.2rem 0 1.4rem;
+        }
+
+        .people-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem 1.6rem;
+            font-size: 0.98rem;
+            color: #2c3e35;
+        }
+
+        .people-list li {
+            padding-left: 0.6rem;
+            position: relative;
+        }
+
+        .people-list li::before {
+            content: "—";
+            position: absolute;
+            left: -0.2rem;
+            color: #9aafa2;
+        }
+
+        .link-context {
+            background: #f3f6f3;
+            border-radius: 24px;
+            padding: 1.8rem 2rem;
+            margin: 2.4rem 0 0.8rem;
+            font-size: 1.02rem;
+        }
+
+        .link-context a {
+            color: #1f593a;
+            text-decoration: none;
+            border-bottom: 1px solid #b6cdbd;
+            padding-bottom: 0.05rem;
+        }
+
+        .link-context a:hover {
+            border-color: #1f593a;
+        }
+
+        .faq-mini {
+            margin-top: 2.8rem;
+            border-top: 1px solid #e5eae6;
+            padding-top: 1.8rem;
+        }
+
+        .faq-mini details {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+        }
+
+        .faq-mini summary {
+            cursor: pointer;
+            font-weight: 450;
+            color: #2d4037;
+            padding: 0.3rem 0;
+        }
+
+        .faq-mini details p {
+            margin: 0.4rem 0 0.8rem 0.6rem;
+            color: #4b5f55;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #e3e9e5;
+            margin: 1.8rem 0 0.6rem;
+        }
+
+        .footer-note {
+            font-size: 0.85rem;
+            color: #869c8e;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 540px) {
+            .page {
+                padding: 2rem 1.2rem 3rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .people-list {
+                grid-template-columns: 1fr;
+            }
+            .card {
+                padding: 1.2rem 1.4rem;
+            }
+            .hero-img {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <h1>爱游戏 · 一处入口</h1>
+    <div class="meta-line">
+        <span>稳定页面</span>
+        <span>·</span>
+        <span>说明向</span>
+        <span>·</span>
+        <span>信息卡片</span>
+    </div>
+
+    <!-- 主视觉 -->
+    <div class="hero-img">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 12h8M12 8v8M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5z" />
+            <circle cx="8" cy="16" r="1" fill="#3b4b42" stroke="none" />
+            <circle cx="16" cy="16" r="1" fill="#3b4b42" stroke="none" />
+            <circle cx="8" cy="8" r="1" fill="#3b4b42" stroke="none" />
+            <circle cx="16" cy="8" r="1" fill="#3b4b42" stroke="none" />
+        </svg>
+        <span class="text">一个稳定的地址 · 页面即入口</span>
+    </div>
+
+    <!-- 自然介绍，嵌入链接 -->
+    <div class="intro">
+        <p>
+            如果你正在找一个指向 <a href="https://portal--aiyouxi.com">爱游戏</a> 的清晰路径，这个页面就是为此准备的。
+            它不绕弯，也不堆砌装饰，只把「爱游戏」这个站点本身以及它与使用场景的关系整理出来。
+            下面用几张卡片和一小段人群说明，来补全对它的印象。
+        </p>
+    </div>
+
+    <!-- 用途卡片 -->
+    <div class="section-title">用途概述</div>
+    <div class="card-grid">
+        <div class="card">
+            <h3>直接引路</h3>
+            <p>一个固定的链接，指向 <a href="https://portal--aiyouxi.com" style="color: #1f593a; text-decoration: none; border-bottom: 1px solid #b6cdbd;">爱游戏</a> 主站。不需要检索或记忆复杂地址，打开即用。</p>
+        </div>
+        <div class="card">
+            <h3>场景示意</h3>
+            <p>适合作为书签、收藏或说明页中的参考入口。页面本身不替代主站功能，只承担“指向”与“说明”的角色。</p>
+            <div class="tag-row">
+                <span class="tag">导航</span>
+                <span class="tag">稳定</span>
+                <span class="tag">简洁</span>
+            </div>
+        </div>
+        <div class="card">
+            <h3>信息补充</h3>
+            <p>除了链接，也附带对站点的简要描述、适用人群和常见疑问，方便初次接触的人快速了解。</p>
+        </div>
+    </div>
+
+    <!-- 适合人群 -->
+    <div class="section-title">适合哪些人</div>
+    <div class="people-section">
+        <ul class="people-list">
+            <li>想直接收藏一个入口的用户</li>
+            <li>需要向别人介绍这个站点的人</li>
+            <li>对页面内容有明确预期，不想点进未知链接</li>
+            <li>偏好极简信息、无干扰阅读的访客</li>
+            <li>寻找「爱游戏」相关说明的浏览者</li>
+        </ul>
+    </div>
+
+    <!-- 自然链接段落（差异化嵌入） -->
+    <div class="link-context">
+        <p>这个页面存在的理由很简单：把 <a href="https://portal--aiyouxi.com">爱游戏</a> 放在一个干净的上下文中，让需要它的人可以毫无负担地过去。链接就在上方句子里，也在每处说明中。你也可以把它看作一个带注释的路标——路标本身不占地方，但它指向的地方值得一看。</p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-mini">
+        <details>
+            <summary>这个页面就是「爱游戏」主站吗？</summary>
+            <p>不是。这是一个介绍与引导页，包含对站点的说明以及指向 <a href="https://portal--aiyouxi.com" style="color: #1f593a; text-decoration: none; border-bottom: 1px solid #b6cdbd;">爱游戏</a> 的直接链接。主站内容需通过链接访问。</p>
+        </details>
+        <details>
+            <summary>链接长期有效吗？</summary>
+            <p>页面指向的地址是固定的。如果将来有变动，这里也会同步更新说明。目前它是一个稳定入口。</p>
+        </details>
+        <details>
+            <summary>为什么要做这样一个页面？</summary>
+            <p>为了给「爱游戏」提供一个干净、克制的信息卡片式介绍，同时让访客在点击链接之前就能对站点的定位和内容有所了解。</p>
+        </details>
+    </div>
+
+    <hr />
+    <div class="footer-note">
+        <!-- 底部自然再出现一次链接，但文本保持严格 "爱游戏" -->
+        <span>关于 <a href="https://portal--aiyouxi.com" style="color: #6d8476; text-decoration: none; border-bottom: 1px solid #c7d5cc;">爱游戏</a> 的一页说明 · 无附加内容</span>
+    </div>
+</div>
+</body>
+</html>
